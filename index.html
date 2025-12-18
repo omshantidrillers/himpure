@@ -1,256 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIMPURE | Premium Packed Drinking Water</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary: #0066cc;
-            --secondary: #00aaff;
-            --accent: #00d4ff;
-            --success: #00aa44;
-            --light: #f0f7ff;
-            --dark: #1a1a2e;
-            --text: #333333;
-            --gray: #666666;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.2);
-        }
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .logo-section { display: flex; align-items: center; gap: 15px; font-weight: bold; }
-        .logo { width: 50px; height: 50px; animation: float 3s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
-        .brand-name { font-size: 28px; font-weight: 800; letter-spacing: 2px; }
-        .nav-menu { display: flex; gap: 30px; flex-wrap: wrap; }
-        .nav-menu a { color: white; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
-        .nav-menu a:hover { opacity: 0.8; transform: translateY(-2px); }
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        .hero h2 { font-size: 48px; margin-bottom: 20px; }
-        .hero p { font-size: 18px; margin-bottom: 30px; }
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin: 10px;
-            transition: all 0.3s ease;
-        }
-        .btn-primary { background: var(--accent); color: var(--dark); }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(0, 212, 255, 0.4); }
-        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
-        .btn-secondary:hover { background: white; color: var(--primary); }
-        section { padding: 80px 0; }
-        .about { background: var(--light); }
-        h2 { font-size: 40px; color: var(--primary); margin-bottom: 20px; text-align: center; }
-        p { margin-bottom: 15px; font-size: 16px; color: var(--gray); line-height: 1.8; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border-top: 4px solid var(--secondary);
-        }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0, 102, 204, 0.2); }
-        .card-icon { font-size: 48px; margin-bottom: 15px; }
-        .card h3 { font-size: 22px; color: var(--primary); margin-bottom: 10px; }
-        .price { font-size: 24px; color: var(--secondary); font-weight: 700; }
-        footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 80px; }
-        .contact-info { background: white; padding: 20px; border-radius: 10px; margin: 20px 0; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIMPURE | Premium Packed Drinking Water</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI'; line-height: 1.6; color: #333; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+header { background: linear-gradient(135deg, #0066cc 0%, #00aaff 100%); color: white; padding: 20px 0; sticky top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0, 102, 204, 0.2); }
+.nav-wrapper { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.logo { width: 50px; height: 50px; animation: float 3s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+.brand-name { font-size: 28px; font-weight: 800; letter-spacing: 2px; }
+.nav-menu { display: flex; gap: 30px; flex-wrap: wrap; }
+.nav-menu a { color: white; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+.nav-menu a:hover { opacity: 0.8; transform: translateY(-2px); }
+.hero { background: linear-gradient(135deg, #0066cc 0%, #00aaff 100%); color: white; padding: 80px 0; }
+.hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.hero h2 { font-size: 48px; margin-bottom: 20px; }
+.hero p { font-size: 18px; margin-bottom: 30px; }
+.hero-image { text-align: center; }
+.hero-image img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.btn { display: inline-block; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; margin: 10px 10px 10px 0; transition: all 0.3s ease; }
+.btn-primary { background: #00d4ff; color: #1a1a2e; }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(0, 212, 255, 0.4); }
+.btn-secondary { background: transparent; color: white; border: 2px solid white; }
+.btn-secondary:hover { background: white; color: #0066cc; }
+section { padding: 80px 0; }
+.about { background: #f0f7ff; }
+h2 { font-size: 40px; color: #0066cc; margin-bottom: 20px; text-align: center; }
+p { margin-bottom: 15px; font-size: 16px; color: #666; line-height: 1.8; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.card { background: white; border-radius: 15px; padding: 30px; text-align: center; transition: all 0.3s ease; border-top: 4px solid #00aaff; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0, 102, 204, 0.2); }
+.card h3 { font-size: 22px; color: #0066cc; margin-bottom: 10px; }
+.price { font-size: 24px; color: #00aaff; font-weight: 700; }
+footer { background: #1a1a2e; color: white; text-align: center; padding: 20px; margin-top: 80px; }
+.contact-info { background: white; padding: 20px; border-radius: 10px; margin: 20px 0; }
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo-section">
-                    <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 20 60 L 35 30 L 45 50 Z" fill="#1BA4D9" opacity="0.8"/>
-                        <path d="M 40 60 L 60 20 L 75 50 Z" fill="#0E7CB5"/>
-                        <circle cx="50" cy="70" r="8" fill="#00D4FF"/>
-                    </svg>
-                    <div>
-                        <h1 class="brand-name">HIMPURE</h1>
-                        <p style="font-size: 12px; margin: 0;">Pure Water, Pure Life</p>
-                    </div>
-                </div>
-                <nav class="nav-menu">
-                    <a href="#products">Products</a>
-                    <a href="#services">Services</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h2>Pure Water for Every Home</h2>
-            <p>Premium quality packed drinking water delivered fresh to your doorstep</p>
-            <a href="#contact" class="btn btn-primary">Order Water Now</a>
-            <a href="#contact" class="btn btn-secondary">Get Quote</a>
-        </div>
-    </section>
-
-    <section class="about">
-        <div class="container">
-            <h2>About HIMPURE</h2>
-            <p>HIMPURE is your trusted partner for premium packed drinking water serving customers across Himachal Pradesh and Punjab.</p>
-            <p>With 18+ years of experience, we combine traditional trust with modern purification technology to deliver pure, safe, and refreshing water.</p>
-            <div class="grid">
-                <div class="card">
-                    <h3>18+</h3>
-                    <p>Years Experience</p>
-                </div>
-                <div class="card">
-                    <h3>10K+</h3>
-                    <p>Happy Customers</p>
-                </div>
-                <div class="card">
-                    <h3>100%</h3>
-                    <p>Pure Water</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="products">
-        <div class="container">
-            <h2>Our Products</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon">🍶</div>
-                    <h3>20L Packed Water</h3>
-                    <p class="price">₹30-50</p>
-                    <p>Premium quality 20-liter bottles</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">💧</div>
-                    <h3>5L Office Pack</h3>
-                    <p class="price">₹15-25</p>
-                    <p>Perfect for offices and workspaces</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🌊</div>
-                    <h3>250ML Mini Pack</h3>
-                    <p class="price">₹5-10</p>
-                    <p>Individual bottles for on-the-go</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🏢</div>
-                    <h3>Bulk Supply</h3>
-                    <p class="price">Custom Quote</p>
-                    <p>For businesses and institutions</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">♻️</div>
-                    <h3>Subscription Plans</h3>
-                    <p class="price">From ₹500/month</p>
-                    <p>Regular delivery packages</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🎁</div>
-                    <h3>Family Bundle</h3>
-                    <p class="price">From ₹1200/month</p>
-                    <p>Complete family packages</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="about">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon">⚡</div>
-                    <h3>Advanced Purification</h3>
-                    <p>Multi-stage RO + UV purification ensuring 99.9% pure water</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🚚</div>
-                    <h3>Home Delivery</h3>
-                    <p>Convenient delivery across Himachal Pradesh and Punjab</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🔬</div>
-                    <h3>Quality Testing</h3>
-                    <p>Regular laboratory testing and quality certification</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">💬</div>
-                    <h3>24/7 Support</h3>
-                    <p>Always available customer support for all needs</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">✅</div>
-                    <h3>Bottle Management</h3>
-                    <p>Efficient pickup and sanitization of empty bottles</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🏆</div>
-                    <h3>Corporate Solutions</h3>
-                    <p>Special packages for businesses and large institutions</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container" style="text-align: center;">
-            <h2>Get Your Pure Water Today</h2>
-            <div class="contact-info">
-                <h3 style="color: var(--primary);">📱 Call / WhatsApp</h3>
-                <p style="margin: 10px 0;">
-                    <a href="tel:+919817917987" style="color: var(--secondary); font-weight: bold; text-decoration: none; font-size: 18px;">+91 98179 17987</a> / 
-                    <a href="tel:+919418852587" style="color: var(--secondary); font-weight: bold; text-decoration: none; font-size: 18px;">+91 94188 52587</a>
-                </p>
-            </div>
-            <div class="contact-info">
-                <h3 style="color: var(--primary);">📧 Email</h3>
-                <p style="margin: 10px 0;"><a href="mailto:omshantiomdrillers@gmail.com" style="color: var(--secondary); font-weight: bold; text-decoration: none;">omshantiomdrillers@gmail.com</a></p>
-            </div>
-            <div class="contact-info">
-                <h3 style="color: var(--primary);">📍 Address</h3>
-                <p style="margin: 5px 0;">M/S Om Shanti Om Drillers (HIMPURE)</p>
-                <p style="margin: 5px 0;">Village Tuhnu, P.O. Kallar</p>
-                <p style="margin: 5px 0;">Tehsil Sadar, District Bilaspur</p>
-                <p style="margin: 5px 0;">Himachal Pradesh, India</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 HIMPURE - Premium Packed Drinking Water. All rights reserved.</p>
-        <p>Serving Himachal Pradesh & Punjab with pure, clean and safe drinking water.</p>
-    </footer>
+<header>
+<div class="container">
+<div class="nav-wrapper">
+<div style="display: flex; align-items: center; gap: 15px;">
+<svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path d="M 20 60 L 35 30 L 45 50 Z" fill="#1BA4D9" opacity="0.8"/>
+<path d="M 40 60 L 60 20 L 75 50 Z" fill="#0E7CB5"/>
+<circle cx="50" cy="70" r="8" fill="#00D4FF"/>
+</svg>
+<div>
+<h1 class="brand-name">HIMPURE</h1>
+<p style="font-size: 12px; margin: 0;">Pure Water, Pure Life</p>
+</div>
+</div>
+<nav class="nav-menu">
+<a href="#products">Products</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<div>
+<h2>Pure Water for Every Home</h2>
+<p>Premium quality packed drinking water purified using advanced Reverse Osmosis technology, delivered fresh to your doorstep</p>
+<a href="#contact" class="btn btn-primary">Order Water Now</a>
+<a href="#contact" class="btn btn-secondary">Get Quote</a>
+</div>
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=600&fit=crop" alt="Happy child with HIMPURE water">
+</div>
+</div>
+</section>
+<section class="about">
+<div class="container">
+<h2>About HIMPURE</h2>
+<p>HIMPURE is your trusted partner for premium packed drinking water. We deliver pure, safe, and refreshing water to families and businesses across Himachal Pradesh and Punjab.</p>
+<p>Our state-of-the-art Reverse Osmosis (RO) water purification system ensures that every bottle you receive meets the highest quality standards, removing impurities while maintaining essential minerals for optimal health.</p>
+<div class="grid">
+<div class="card">
+<h3>10K+</h3>
+<p>Happy Customers</p>
+</div>
+<div class="card">
+<h3>100%</h3>
+<p>Pure Water</p>
+</div>
+<div class="card">
+<h3>24/7</h3>
+<p>Reliable Delivery</p>
+</div>
+</div>
+</div>
+</section>
+<section id="products">
+<div class="container">
+<h2>Our Products</h2>
+<div class="grid">
+<div class="card"><h3>20L Packed Water</h3><p class="price">₹30-50</p><p>RO purified premium quality</p></div>
+<div class="card"><h3>5L Office Pack</h3><p class="price">₹15-25</p><p>Perfect for offices</p></div>
+<div class="card"><h3>250ML Mini Pack</h3><p class="price">₹5-10</p><p>On-the-go solution</p></div>
+<div class="card"><h3>Bulk Supply</h3><p class="price">Custom Quote</p><p>For businesses</p></div>
+<div class="card"><h3>Subscription Plans</h3><p class="price">From ₹500/month</p><p>Regular delivery</p></div>
+<div class="card"><h3>Family Bundle</h3><p class="price">From ₹1200/month</p><p>Complete packages</p></div>
+</div>
+</div>
+</section>
+<section id="services" class="about">
+<div class="container">
+<h2>Our Services</h2>
+<div class="grid">
+<div class="card"><h3>Reverse Osmosis Purification</h3><p>Advanced multi-stage RO system removing 99.9% of impurities</p></div>
+<div class="card"><h3>Home Delivery</h3><p>Convenient delivery with flexible scheduling</p></div>
+<div class="card"><h3>Quality Testing</h3><p>Regular lab testing for safety standards</p></div>
+<div class="card"><h3>24/7 Support</h3><p>Always available customer support</p></div>
+<div class="card"><h3>Bottle Management</h3><p>Pickup, cleaning, and sanitization</p></div>
+<div class="card"><h3>Corporate Solutions</h3><p>Special packages for businesses</p></div>
+</div>
+</div>
+</section>
+<section id="contact">
+<div class="container" style="text-align: center;">
+<h2>Get Your Pure Water Today</h2>
+<div class="contact-info">
+<h3 style="color: #0066cc;">Call / WhatsApp</h3>
+<p><a href="tel:+919817917987" style="color: #00aaff; font-weight: bold; text-decoration: none; font-size: 18px;">+91 98179 17987</a> / <a href="tel:+919418852587" style="color: #00aaff; font-weight: bold; text-decoration: none; font-size: 18px;">+91 94188 52587</a></p>
+</div>
+<div class="contact-info">
+<h3 style="color: #0066cc;">Email</h3>
+<p><a href="mailto:omshantiomdrillers@gmail.com" style="color: #00aaff; font-weight: bold; text-decoration: none;">omshantiomdrillers@gmail.com</a></p>
+</div>
+<div class="contact-info">
+<h3 style="color: #0066cc;">Address</h3>
+<p>M/S Om Shanti Om Drillers (HIMPURE)<br>Village Tuhnu, P.O. Kallar<br>Tehsil Sadar, District Bilaspur<br>Himachal Pradesh, India</p>
+</div>
+</div>
+</section>
+<footer>
+<p>&copy; 2025 HIMPURE - Premium Packed Drinking Water. All rights reserved.</p>
+<p>Serving Himachal Pradesh & Punjab with pure, clean water using advanced Reverse Osmosis technology.</p>
+</footer>
 </body>
 </html>
